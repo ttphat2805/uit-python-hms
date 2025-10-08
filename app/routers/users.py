@@ -15,7 +15,7 @@ from ..schemas.user import (
     UserOut,
 )
 
-router = APIRouter(prefix="/users", tags=["Users"])
+router = APIRouter()
 
 
 def require_manager(user: User):

@@ -11,7 +11,7 @@ from ..models.guest import Gender
 from ..repositories.guest_repo import GuestRepository
 from ..schemas.guest import GuestCreate, GuestUpdate, GuestOut, PagedGuestOut
 
-router = APIRouter(prefix="/guests", tags=["Guests"])
+router = APIRouter()
 
 
 def get_repo(session: AsyncSession = Depends(get_session)) -> GuestRepository:

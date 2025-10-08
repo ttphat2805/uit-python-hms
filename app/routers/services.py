@@ -11,7 +11,7 @@ from ..models.service import ServiceStatus
 from ..repositories.service_repo import ServiceRepository
 from ..schemas.service import ServiceCreate, ServiceUpdate, ServiceOut, PagedServiceOut
 
-router = APIRouter(prefix="/services", tags=["Services"])
+router = APIRouter()
 
 def get_repo(session: AsyncSession = Depends(get_session)) -> ServiceRepository:
     return ServiceRepository(session)

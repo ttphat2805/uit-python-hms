@@ -10,7 +10,7 @@ from ..schemas.room_type import RoomTypeCreate, RoomTypeUpdate, RoomTypeOut
 from ..repositories.room_type_repo import RoomTypeRepository
 from ..dependencies import get_current_user, require_manager, require_receptionist
 
-router = APIRouter(prefix="/room-types", tags=["Room Types"])
+router = APIRouter()
 
 @router.get("", response_model=List[RoomTypeOut])
 async def list_room_types(

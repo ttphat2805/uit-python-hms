@@ -17,7 +17,7 @@ from ..schemas.room import (
     HousekeepingStatusUpdate,
 )
 
-router = APIRouter(prefix="/rooms", tags=["Rooms"])
+router = APIRouter()
 
 
 def get_repo(session: AsyncSession = Depends(get_session)) -> RoomRepository:
